@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#header {
+  height: 46px;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  /* font-family: ; */
+}
+/* cái rương */
+#nav {
+  display: inline-block;
+}
+#nav .subnav {
+  list-style-type: none;
+}
+#nav .sale {
+  list-style-type: none;
+}
+#nav .nam {
+  list-style-type: none;
+}
+#nav .Nu {
+  list-style-type: none;
+}
+
+/* sắp xếp các ngăn xếp li theo chiều ngang */
+#nav > li {
+  display: inline-block;
+  position: relative;
+}
+/* phần tử thuộc thẻ li trong id nav */
+#nav li a {
+  color: white;
+  /* xóa gạch chân */
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0 24px;
+  display: inline-block;
+}
+/* thay đổi màu khi ghi chuột vào phần tử a của thẻ li và các thẻ li của lớp subnav */
+#nav > li:hover > a,
+#nav .subnav li:hover,
+#nav .sale li:hover,
+#nav .nam li:hover,
+#nav .Nu li:hover {
+  color: black;
+  background-color: #ccc;
+  /* điều chỉnh màu  background bằng với ngăn xếp li*/
+}
+
+#nav > li:hover > .subnav {
+  display: block;
+}
+#nav li:hover .sale {
+  display: block;
+}
+#nav li:hover .nam {
+  display: block;
+}
+#nav li:hover .Nu {
+  display: block;
+}
+/* xử lý cái lớp trong id nav */
+#nav .subnav {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 46px;
+  min-width: 110%;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+#nav .sale {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 46px;
+  min-width: 150%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .nam {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 46px;
+  min-width: 150%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .Nu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 46px;
+  min-width: 160%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a {
+  color: black;
+  padding: 0 12px;
+}
+#nav .sale a {
+  color: black;
+  padding: 0 12px;
+}
+#nav .nam a {
+  color: black;
+  padding: 0 12px;
+}
+#nav .Nu a {
+  color: black;
+  padding: 0 12px;
+}
+/* chỉnh icon */
+#nav .down {
+  font-size: 10px;
+}
+#header .seach {
+  float: right;
+  color: #fff;
+  font-size: 28px;
+  line-height: 46px;
+  padding: 0 21px;
+}
+#header .seach:hover {
+  background-color: red;
+}
+#slider {
+  padding: 0;
+  margin: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-container {
+  height: 400px; /* Adjust based on your image height */
+  overflow: hidden;
+  position: relative;
+}
+
+.navigation .prev {
+  position: absolute;
+  z-index: 10;
+  font-size: 25px;
+  top: 100px;
+  left: 50px;
+  font-weight: 700;
+}
+.navigation .next {
+  left: 950px;
+  z-index: 10;
+  position: absolute;
+  font-size: 25px;
+  font-weight: 700;
+  top: 100px;
+}
+.navigation .nav-btn {
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+/* kệ sản phẩm */
+#content {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.product-card .price {
+  color: #888;
+  font-size: 1em;
+}
+
+.product-card .discount {
+  color: red;
+  font-weight: bold;
+  margin-left: 10px;
+}
